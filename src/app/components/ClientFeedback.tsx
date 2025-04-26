@@ -58,7 +58,7 @@ const ClientFeedback = () => {
                 objectFit="cover"
               />
             </div>
-            <p className="text-lg text-gray-700 dark:text-gray-200 mb-4">"{testimonials[index].feedback}"</p>
+            <p className="text-lg text-gray-700 dark:text-gray-200 mb-4">{testimonials[index].feedback}</p>
             <h3 className="font-semibold text-blue-600 dark:text-blue-400">{testimonials[index].name}</h3>
           </motion.div>
         </AnimatePresence>
