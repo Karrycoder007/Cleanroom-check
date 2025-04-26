@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function HeroWithSlider() {
   const images = [
@@ -59,9 +60,11 @@ export default function HeroWithSlider() {
             >
               {images.map((src, idx) => (
                 <div key={idx} className="flex-shrink-0 w-full">
-                  <img
+                  <Image
                     src={src}
                     alt={`Slide ${idx + 1}`}
+                    width={1200} // Define the width for optimization
+                    height={500} // Define the height for optimization
                     className="object-cover w-full h-80 rounded-xl"
                   />
                 </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const services = [
   {
@@ -53,9 +54,11 @@ const Services = () => {
               className="bg-white/10 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-md w-full sm:w-[300px] md:w-[320px] lg:w-[340px] p-6 backdrop-blur-md hover:shadow-blue-400/50 transition-all duration-300"
             >
               <div className="w-full h-40 flex items-center justify-center">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
+                  width={100} // Set width
+                  height={100} // Set height
                   className="h-full object-contain"
                 />
               </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -15,7 +16,7 @@ const About = () => {
             <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
               Providing International Pharma Graded Industrial Essentials, based on advanced technologies & machinery,
               authentically designed, manufactured, and controlled under the supervision of a professionalized team. We
-              emphasize on time efficiency and offer affordable costs, which makes SML Clean Room Solutions unique in the
+              emphasize time efficiency and offer affordable costs, which makes SML Clean Room Solutions unique in the
               industry.
             </p>
             <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
@@ -35,9 +36,11 @@ const About = () => {
 
           {/* Right Section (Image) */}
           <div className="flex-shrink-0 w-full lg:w-1/2">
-            <img
+            <Image
               src="https://plus.unsplash.com/premium_photo-1661662872476-a3c74d72da6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTd8fGNsZWFuaW5nfGVufDB8fDB8fHww" // Replace with the actual image URL
               alt="Cleanroom services"
+              width={600}
+              height={400}
               className="w-full h-auto rounded-lg shadow-lg object-cover"
             />
           </div>
