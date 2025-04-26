@@ -11,10 +11,9 @@ const AboutPage = () => {
           src="https://images.unsplash.com/photo-1745173036546-c56551790fb8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNHx8fGVufDB8fHx8fA%3D%3D"
           alt="Cleanroom"
           layout="fill"
-          objectFit="cover"
-          className="opacity-90"
+          className="opacity-90 object-cover"
         />
-        <div className="absolute inset-0  flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,13 +49,15 @@ const AboutPage = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid md:grid-cols-2 gap-10 items-center"
         >
-          <Image
-            src="https://images.unsplash.com/photo-1743930286867-acbd47f58e8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D"
-            alt="Cleanroom Process"
-            width={600}
-            height={400}
-            className="rounded-xl shadow-lg"
-          />
+          <div>
+            <Image
+              src="https://images.unsplash.com/photo-1743930286867-acbd47f58e8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D"
+              alt="Cleanroom Process"
+              width={600}
+              height={400}
+              className="rounded-xl shadow-lg"
+            />
+          </div>
           <div>
             <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
             <p className="text-lg leading-relaxed">
@@ -82,13 +83,15 @@ const AboutPage = () => {
               <li>Eco-conscious, Affordable Options</li>
             </ul>
           </div>
-          <Image
-            src="https://images.unsplash.com/photo-1743930286867-acbd47f58e8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D"
-            alt="Technicians at Work"
-            width={600}
-            height={400}
-            className="rounded-xl shadow-lg"
-          />
+          <div>
+            <Image
+              src="https://images.unsplash.com/photo-1743930286867-acbd47f58e8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D"
+              alt="Technicians at Work"
+              width={600}
+              height={400}
+              className="rounded-xl shadow-lg"
+            />
+          </div>
         </motion.div>
       </section>
 
