@@ -18,9 +18,10 @@ export default function HeroWithSlider() {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
-
+  
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);  // Add images.length as a dependency
+  
 
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
