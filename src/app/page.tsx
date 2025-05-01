@@ -17,7 +17,7 @@ export default function Home() {
     <div>
 
 
-        <LoadingScreen onFinish={undefined}/>
+        <LoadingScreen onFinish={()=>{}}/>
         <Hero/>
         <Vision/>
         <About/>
