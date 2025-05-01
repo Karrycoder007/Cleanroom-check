@@ -4,14 +4,19 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
-const Loader = ({ onFinish }) => {
+interface LoaderProps {
+  onFinish: () => void; // 👈 type declared
+}
+
+const Loader = ({ onFinish }: LoaderProps) => {
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoader(false);
-      onFinish(); // callback to hide loader in parent
+      onFinish();
     }, 3000);
+
     return () => clearTimeout(timer);
   }, [onFinish]);
 
@@ -31,7 +36,7 @@ const Loader = ({ onFinish }) => {
             transition={{ duration: 1 }}
           >
             <Image
-              src="https://p1.hiclipart.com/preview/129/580/1010/car-logos-with-tamplate-lamborghini-icon-png-icon.jpg" // Use a local SVG file or update with your actual logo path
+              src="https://p1.hiclipart.com/preview/129/580/1010/car-logos-with-tamplate-lamborghini-icon-png-icon.jpg"
               alt="Cleanroom Logo"
               width={160}
               height={160}
