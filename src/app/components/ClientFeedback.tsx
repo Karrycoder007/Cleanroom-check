@@ -48,7 +48,7 @@ const ClientFeedback = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="relative bg-gray-100 dark:bg-gray-800 p-8 rounded-2xl shadow-xl"
+            className="relative bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl shadow-xl"
           >
             <div className="w-20 h-20 mx-auto mb-4 relative rounded-full overflow-hidden border-4 border-blue-500">
               <Image

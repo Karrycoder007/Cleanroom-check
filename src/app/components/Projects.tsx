@@ -14,11 +14,11 @@ const projects = [
   },
   {
     title: 'Sterile Packaging Line',
-    image: 'https://images.unsplash.com/photo-1728044849291-69f90d443aea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8',
+    image: 'https://plus.unsplash.com/premium_photo-1666371123747-1abbf463a1a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3RlcmlsZSUyMHBhY2thZ2luZyUyMGxpbmV8ZW58MHx8MHx8fDA%3D',
   },
   {
     title: 'Custom Pharma Cabinets',
-    image: 'https://images.unsplash.com/photo-1617692855027-503c746ed7a1?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1660212588628-9e81267100e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBoYXJtYSUyMGNhYmluZXRzfGVufDB8fDB8fHww',
   },
 ];
 

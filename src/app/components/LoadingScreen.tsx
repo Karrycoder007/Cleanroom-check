@@ -15,7 +15,7 @@ const Loader = ({ onFinish }: LoaderProps) => {
     const timer = setTimeout(() => {
       setShowLoader(false);
       onFinish();
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [onFinish]);
