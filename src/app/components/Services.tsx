@@ -36,7 +36,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-white dark:bg-gray-950 py-16 md:py-24">
+    <section className="bg-white dark:bg-gradient-to-r from-black via-blue-800 to-black py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12">
           Our Services

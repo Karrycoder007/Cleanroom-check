@@ -5,6 +5,17 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* globals.css or any global stylesheet */
+.bg-stripes {
+  background: repeating-linear-gradient(
+    to right,
+    #1a1a1a 0px,
+    #1a1a1a 60px,
+    #990000 60px,
+    #990000 120px
+  );
+}
+
 
 @theme inline {
   --color-background: var(--background);

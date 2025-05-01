@@ -38,7 +38,7 @@ const ClientFeedback = () => {
   }, []);
 
   return (
-    <section className="bg-white dark:bg-gray-900 py-16 px-4">
+    <section className="bg-white dark:bg-gradient-to-r from-black via-blue-950 to-black py-16 px-4">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-10 text-gray-900 dark:text-white">What Our Clients Say</h2>
         <AnimatePresence mode="wait">

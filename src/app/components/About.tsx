@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-16 md:py-24">
+    <section className="bg-gray-50 dark:bg-gradient-to-r from-black via-blue-950 to-blue-900 py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           {/* Left Section (Text and Button) */}
