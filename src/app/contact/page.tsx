@@ -88,7 +88,7 @@ const ContactPage = () => {
         <div className="mt-16">
           <iframe
             className="w-full h-72 rounded-xl border-0"
-            src="https://www.google.com/maps/embed?pb=!1m18!..."
+            src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7781.055278113541!2d77.6742625!3d12.809144!3m2!1i1024!2i768!4f13.1!2m1!1ssl%20airtech%20bangalore!5e0!3m2!1sen!2sin!4v1746186157073!5m2!1sen!2sin"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

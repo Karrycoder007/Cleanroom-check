@@ -24,7 +24,7 @@ const Loader = ({ onFinish }: LoaderProps) => {
     <AnimatePresence>
       {showLoader && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+          className="fixed inset-0 z-110 flex items-center justify-center bg-black"
           initial={{ y: 0 }}
           exit={{ y: '-100%' }}
           transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}

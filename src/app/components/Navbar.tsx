@@ -11,7 +11,7 @@ const navItems = [
   {
     title: 'Services',
     submenu: [
-      { name: 'Industrial Cleaning', href: '/Cleaning' },
+      { name: 'Industrial Cleaning', href: '/services' },
       { name: 'Home Cleaning', href: '/services/home' },
       { name: 'Commercial', href: '/services/commercial' },
     ],
@@ -25,14 +25,19 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setActiveMobileDropdown(null);
+  };
+
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur shadow-sm ">
+    <nav className="fixed top-0 z-[100] w-full bg-white dark:bg-gray-900 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo-1.webp" alt="Cleanroom" width={60} height={60} />
-             <span className="text-xl font-bold text-gray-800 dark:text-white">Cleanroom</span> 
+            <span className="text-xl font-bold text-gray-800 dark:text-white">Cleanroom</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -82,9 +87,10 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: 'auto' }}
-            exit={{ height: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden bg-white dark:bg-gray-900 px-4 pt-2 pb-4 space-y-2"
           >
             {navItems.map((item, idx) =>
@@ -113,6 +119,7 @@ export default function Navbar() {
                           <Link
                             key={subIdx}
                             href={sub.href}
+                            onClick={closeMobileMenu}
                             className="block text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500"
                           >
                             {sub.name}
@@ -126,6 +133,7 @@ export default function Navbar() {
                 <Link
                   key={idx}
                   href={item.href!}
+                  onClick={closeMobileMenu}
                   className="block text-gray-800 dark:text-white py-2 hover:text-blue-600"
                 >
                   {item.title}
