@@ -32,7 +32,7 @@ export default function HeroWithSlider() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-gradient-to-r from-black via-blue-900 to-blue-950 py-16 md:py-24">
+    <section className="relative overflow-hidden bg-white dark:bg-gradient-to-r from-black via-blue-900 to-blue-950 py-16 mt-10 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-10">
         {/* Text Content */}
         <div className="text-center lg:text-left max-w-xl">

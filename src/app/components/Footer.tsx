@@ -20,7 +20,7 @@ const Footer = () => {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About Us</Link></li>
             <li><Link href="/services">Services</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
+            
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
             <li>Modular Panels</li>
             <li>HVAC Systems</li>
             <li>Pharma Equipment</li>
-            <li>Turnkey Solutions</li>
+            
           </ul>
         </div>
 
@@ -60,6 +60,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="mt-12 border-t border-gray-700 pt-6 text-sm text-center text-gray-400">
         © {new Date().getFullYear()} SML Clean Room Solutions. All rights reserved.
+        <p>Made with 💖 from <a href="https://grudhrasolutions.com/" target='_blank'>Grudhra Solutions</a></p>
       </div>
     </footer>
   );

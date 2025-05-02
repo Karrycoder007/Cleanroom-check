@@ -12,8 +12,8 @@ const navItems = [
     title: 'Services',
     submenu: [
       { name: 'Industrial Cleaning', href: '/services' },
-      { name: 'Home Cleaning', href: '/services/home' },
-      { name: 'Commercial', href: '/services/commercial' },
+      { name: 'Home Cleaning', href: '/services' },
+      { name: 'Commercial', href: '/services' },
     ],
   },
   { title: 'About', href: '/about' },
