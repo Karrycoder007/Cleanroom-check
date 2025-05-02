@@ -16,8 +16,8 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
   imageUrl,
 }) => {
   return (
-    <section className="w-full py-12 md:py-20 bg-gray-50 dark:bg-gradient-to-r from-black via-blue-900 to-blue-950">
-      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <section className="w-full py-12  md:py-20 bg-gray-50 dark:bg-gradient-to-r from-black via-blue-900 to-blue-950">
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center mt-12">
         <div>
           <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{title}</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-6">{description}</p>
