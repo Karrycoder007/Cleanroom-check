@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -7,7 +8,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo & Intro */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">SML Clean Room</h2>
+        <Link href="/" className="flex items-center space-x-2 py-2">
+            <Image src="/logo-1.webp" alt="Cleanroom" width={190} height={190} />
+            <span className="text-xl font-bold text-gray-800 dark:text-white"></span>
+          </Link>
           <p className="text-sm text-gray-400">
             Delivering pharma-grade cleanroom solutions with technology, efficiency, and trust.
           </p>

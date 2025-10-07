@@ -9,38 +9,40 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navItems = [
   { title: 'Home', href: '/' },
   {
-    title: 'Services',href:'/services',
+    title: 'Services',
+    href: '/services',
     submenu: [
-      { name: 'Cleanroom Panels', href: '/services' },
-      { name: 'Cleanroom Doors', href: '/services/cleanroom-doors' },
-      { name: 'Fire Doors', href: '/services/fire-doors' },
-      { name: 'Air Handling Units', href: '/services/air-handling-units' },
-      { name: 'Fan Filter Unit', href: '/services/fan-filter-unit' },
-      { name: 'Fan Coil Unit', href: '/services/fan-coil-unit' },
-      { name: 'Ventilation & Exhaust Unit', href: '/services/ventilation-exhaust-unit' },
-      { name: 'Epoxy & Vinyl Flooring', href: '/services/epoxy-vinyl-flooring' },
-      { name: 'PVC & Aluminium Coving', href: '/services/pvc-aluminium-coving' },
-      { name: 'Cleanroom Equipment', href: '/services/cleanroom-equipment' },
-      { name: 'Dynamic & Static Passbox', href: '/services/passbox' },
-      { name: 'Laminar Airflow', href: '/services/laminar-airflow' },
-      { name: 'Air Showers', href: '/services/air-showers' },
-      { name: 'Bio Safety Cabinet', href: '/services/bio-safety-cabinet' },
-      { name: 'Filter Cleaning Booth', href: '/services/filter-cleaning-booth' },
-      { name: 'SS Lab Furnitures', href: '/services/ss-lab-furnitures' },
-      { name: 'Cross Over Bench', href: '/services/cross-over-bench' },
-      { name: 'Fume Hoods & Garment Cubicle', href: '/services/fume-hoods-garment-cubicle' },
-      { name: 'HVAC Systems', href: '/services/hvac-systems' },
-      { name: 'Pre Fabricated Ducts', href: '/services/pre-fabricated-ducts' },
-      { name: 'Solar Hybrid AC', href: '/services/solar-hybrid-ac' },
-      { name: 'Air Purifier', href: '/services/air-purifier' },
-      { name: 'Dehumidifier', href: '/services/dehumidifier' },
-      { name: 'Air Curtains', href: '/services/air-curtains' },
+      { name: 'Cleanroom Panels' },
+      { name: 'Cleanroom Doors' },
+      { name: 'Fire Doors' },
+      { name: 'Air Handling Units' },
+      { name: 'Fan Filter Unit' },
+      { name: 'Fan Coil Unit' },
+      { name: 'Ventilation & Exhaust Unit' },
+      { name: 'Epoxy & Vinyl Flooring' },
+      { name: 'PVC & Aluminium Coving' },
+      { name: 'Cleanroom Equipment' },
+      { name: 'Dynamic & Static Passbox' },
+      { name: 'Laminar Airflow' },
+      { name: 'Air Showers' },
+      { name: 'Bio Safety Cabinet' },
+      { name: 'Filter Cleaning Booth' },
+      { name: 'SS Lab Furnitures' },
+      { name: 'Cross Over Bench' },
+      { name: 'Fume Hoods & Garment Cubicle' },
+      { name: 'HVAC Systems' },
+      { name: 'Pre Fabricated Ducts' },
+      { name: 'Solar Hybrid AC' },
+      { name: 'Air Purifier' },
+      { name: 'Dehumidifier' },
+      { name: 'Air Curtains' },
     ],
   },
   { title: 'About', href: '/about' },
-  { title: 'Careers', href: '/careers' }, // ✅ New Careers page
+  { title: 'Careers', href: '/careers' },
   { title: 'Contact', href: '/contact' },
 ];
+
 
 
 export default function Navbar() {
@@ -58,8 +60,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo-1.webp" alt="Cleanroom" width={60} height={60} />
-            <span className="text-xl font-bold text-gray-800 dark:text-white">Cleanroom</span>
+            <Image src="/logo-1.webp" alt="Cleanroom" width={150} height={150} />
+            <span className="text-xl font-bold text-gray-800 dark:text-white"></span>
           </Link>
 
           {/* Desktop Menu */}
@@ -79,15 +81,16 @@ export default function Navbar() {
                                dark:scrollbar-thumb-gray-600 scrollbar-track-transparent"
                   >
                     {item.submenu.map((sub, i) => (
-                      <Link
-                        key={i}
-                        href={sub.href}
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 
-                                   hover:bg-gray-100 dark:hover:bg-gray-700 rounded-sm"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
+  <Link
+    key={i}
+    href="/services" // ✅ All submenu items go to the same route
+    className="block px-2 py-1 text-sm text-gray-700 dark:text-gray-200 
+               hover:bg-gray-100 dark:hover:bg-gray-700 rounded-sm transition"
+  >
+    {sub.name}
+  </Link>
+))}
+
                   </div>
                 </div>
               ) : (
