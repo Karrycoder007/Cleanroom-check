@@ -6,7 +6,17 @@ import Image from 'next/image';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const navItems = [
+interface SubMenuItem {
+  name: string;
+}
+
+interface NavItem {
+  title: string;
+  href?: string;
+  submenu?: SubMenuItem[];
+}
+
+const navItems: NavItem[] = [
   { title: 'Home', href: '/' },
   {
     title: 'Services',
@@ -42,8 +52,6 @@ const navItems = [
   { title: 'Careers', href: '/careers' },
   { title: 'Contact', href: '/contact' },
 ];
-
-
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -81,16 +89,15 @@ export default function Navbar() {
                                dark:scrollbar-thumb-gray-600 scrollbar-track-transparent"
                   >
                     {item.submenu.map((sub, i) => (
-  <Link
-    key={i}
-    href="/services" // ✅ All submenu items go to the same route
-    className="block px-2 py-1 text-sm text-gray-700 dark:text-gray-200 
-               hover:bg-gray-100 dark:hover:bg-gray-700 rounded-sm transition"
-  >
-    {sub.name}
-  </Link>
-))}
-
+                      <Link
+                        key={i}
+                        href="/services" // ✅ all submenu items go to the same page
+                        className="block px-2 py-1 text-sm text-gray-700 dark:text-gray-200 
+                                   hover:bg-gray-100 dark:hover:bg-gray-700 rounded-sm transition"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               ) : (
@@ -156,7 +163,7 @@ export default function Navbar() {
                         {item.submenu.map((sub, subIdx) => (
                           <Link
                             key={subIdx}
-                            href={sub.href}
+                            href="/services" // ✅ mobile submenu all go to /services
                             onClick={closeMobileMenu}
                             className="block text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500"
                           >
