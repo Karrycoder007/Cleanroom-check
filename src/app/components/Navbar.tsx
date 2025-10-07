@@ -9,9 +9,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navItems = [
   { title: 'Home', href: '/' },
   {
-    title: 'Services',
+    title: 'Services',href:'/services',
     submenu: [
-      { name: 'Cleanroom Panels', href: '/services/cleanroom-panels' },
+      { name: 'Cleanroom Panels', href: '/services' },
       { name: 'Cleanroom Doors', href: '/services/cleanroom-doors' },
       { name: 'Fire Doors', href: '/services/fire-doors' },
       { name: 'Air Handling Units', href: '/services/air-handling-units' },

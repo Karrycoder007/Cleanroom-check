@@ -11,6 +11,7 @@ import ClientFeedback from "./components/ClientFeedback";
 import LoadingScreen from "./components/LoadingScreen";
 import Vision from "./components/Vision";
 import IndustriesWeServe from "./components/IndustriesWeServe";
+import OurClients from "./components/Clients";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Services/>
         <IndustriesWeServe/>
         <Projects/>
+        <OurClients/>
         <ClientFeedback/>
       
     </div>

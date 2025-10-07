@@ -24,7 +24,7 @@ const Loader = ({ onFinish }: LoaderProps) => {
     <AnimatePresence>
       {showLoader && (
         <motion.div
-          className="fixed inset-0 z-110 flex items-center justify-center bg-black"
+          className="fixed inset-0 z-110 flex items-center justify-center bg-gray-900"
           initial={{ y: 0 }}
           exit={{ y: '-100%' }}
           transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
@@ -36,10 +36,10 @@ const Loader = ({ onFinish }: LoaderProps) => {
             transition={{ duration: 1 }}
           >
             <Image
-              src="https://p1.hiclipart.com/preview/129/580/1010/car-logos-with-tamplate-lamborghini-icon-png-icon.jpg"
+              src="/logo-1.webp"
               alt="Cleanroom Logo"
-              width={160}
-              height={160}
+              width={220}
+              height={220}
               priority
             />
           </motion.div>

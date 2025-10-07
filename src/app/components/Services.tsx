@@ -7,30 +7,44 @@ const services = [
   {
     title: 'Pharma Cleanroom Setup',
     description:
-      'Design and installation of pharma-grade cleanrooms tailored to meet international standards, ensuring contamination control and operational efficiency.',
-    image:
-      'https://www.svgrepo.com/show/376843/laboratory-research-scientist.svg',
+      'Design and installation of pharma-grade cleanrooms, ensuring contamination control, operational efficiency, and regulatory compliance.',
+    image: 'https://www.svgrepo.com/show/376843/laboratory-research-scientist.svg',
   },
   {
-    title: 'HVAC & Filtration Systems',
+    title: 'HVAC Systems',
     description:
-      'High-performance HVAC and air filtration systems for cleanroom environments, designed to regulate air quality and pressure with precision.',
-    image:
-      'https://www.svgrepo.com/show/488821/hvac.svg',
+      'Energy-efficient HVAC solutions for cleanrooms and laboratories, designed to maintain optimal air quality, temperature, and pressure.',
+    image: 'https://www.svgrepo.com/show/488821/hvac.svg',
   },
   {
-    title: 'Modular Wall Panels',
+    title: 'Electrical & IBMS',
     description:
-      'Customized modular wall solutions for sterile environments, made with premium materials for easy installation and maintenance.',
-    image:
-      'https://www.svgrepo.com/show/487991/wall.svg',
+      'Complete electrical installations, including Intelligent Building Management Systems (IBMS) for automated and safe operations.',
+    image: 'https://www.svgrepo.com/show/48025/electricity.svg',
   },
   {
-    title: 'Cleanroom Consumables',
+    title: 'Modular Partitions & Wall Panels',
     description:
-      'Supply of industry-grade cleanroom garments, gloves, masks, and other consumables to support sterile practices.',
-    image:
-      'https://www.svgrepo.com/show/489126/gloves.svg',
+      'Customized modular wall solutions and partitions for sterile environments, with premium materials and easy installation.',
+    image: 'https://www.svgrepo.com/show/487991/wall.svg',
+  },
+  {
+    title: 'Plumbing & Firefighting',
+    description:
+      'Comprehensive plumbing solutions and firefighting systems designed for industrial, laboratory, and cleanroom safety.',
+    image: 'https://www.svgrepo.com/show/489102/fire-extinguisher.svg',
+  },
+  {
+    title: 'Laboratory Furniture',
+    description:
+      'High-quality laboratory furniture tailored for durability, ergonomics, and compliance with safety standards.',
+    image: 'https://www.svgrepo.com/show/385994/lab-bench.svg',
+  },
+  {
+    title: 'Validation & Maintenance',
+    description:
+      'End-to-end services including testing, commissioning, validation, and maintenance of cleanroom and HVAC systems.',
+    image: 'https://www.svgrepo.com/show/491385/maintenance.svg',
   },
 ];
 
@@ -57,8 +71,8 @@ const Services = () => {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  width={100} // Set width
-                  height={100} // Set height
+                  width={100}
+                  height={100}
                   className="h-full object-contain"
                 />
               </div>
