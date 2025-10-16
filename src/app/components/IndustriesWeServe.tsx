@@ -2,13 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const industries = [
-  "Pharmaceuticals",
-  "Biotechnology",
-  "Healthcare",
-  "Micro Electronics",
-  "Food & Beverages",
-  "Dry Rooms for Automobile Industry",
-  "Photovoltaic / Nano",
+  "Pharmaceuticals & Biotechnology",
+  "Healthcare & Laboratories",
+  "Electronics & Semiconductor Assembly",
+  "Food & Beverage Cleanrooms",
+  "Industrial HVAC Systems",
+  "Air Filtration & Purification",
 ];
 
 const IndustriesWeServe: React.FC = () => {
@@ -32,7 +31,7 @@ const IndustriesWeServe: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          iClean is a leading global player in providing Integrated Turnkey Solutions for the following sectors:
+          SL Airtech Pvt. Ltd. provides integrated cleanroom and HVAC solutions for a variety of industries, ensuring compliance, hygiene, and safety standards.
         </motion.p>
 
         {/* Grid */}
@@ -57,7 +56,7 @@ const IndustriesWeServe: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          We continuously strive to deliver custom cleanroom solutions that meet the unique needs of these industries with precision, compliance, and excellence.
+          Our team ensures every solution is tailored to the specific needs of each industry, maintaining quality, efficiency, and compliance with global standards.
         </motion.p>
       </div>
     </section>

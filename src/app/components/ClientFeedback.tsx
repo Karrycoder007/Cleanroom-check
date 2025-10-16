@@ -3,27 +3,26 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 const testimonials = [
   {
-    name: 'Anjali R.',
-    feedback: 'SML Clean Room Solutions delivered exactly what we needed. Their expertise and timely delivery made a huge difference.',
-    image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlfGVufDB8fDB8fHww',
+    name: 'Rajesh Kumar',
+    feedback: 'SL Airtech delivered our cleanroom project on time and within budget. Their attention to detail and adherence to international standards were commendable.',
+    title: 'Project Manager at PharmaTech Solutions',
+    image: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=600&auto=format&fit=crop&q=60',
   },
   {
-    name: 'Rahul M.',
-    feedback: 'Professional, innovative, and efficient. Our production line is cleaner and more efficient now.',
-    image: 'https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    name: 'Anjali Sharma',
+    feedback: 'The team at SL Airtech provided us with a customized HVAC solution that perfectly fit our requirements. Their professionalism and expertise were evident throughout the project.',
+    title: 'Operations Head at BioMed Industries',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=60',
   },
   {
-    name: 'Dr. S. Verma',
-    feedback: 'Excellent pharma-grade installations. Highly recommend their team for cleanroom solutions.',
-    image: 'https://plus.unsplash.com/premium_photo-1675791727728-f829fde51f70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D',
-  },
-  {
-    name: 'Meera P.',
-    feedback: 'A reliable partner for any cleanroom requirements. Their approach is scientific and results-driven.',
-    image: 'https://plus.unsplash.com/premium_photo-1669882305339-8e2cbb81903e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D',
+    name: 'Vikram Rao',
+    feedback: "We have been consistently impressed with SL Airtech's commitment to quality and timely execution. Their after-sales support is exceptional.",
+    title: 'Facility Manager at CleanTech Labs',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=60',
   },
 ];
 
@@ -33,14 +32,14 @@ const ClientFeedback = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 6000); // change every 6 seconds
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="bg-white dark:bg-gradient-to-r from-black via-blue-950 to-black py-16 px-4">
+    <section className="bg-gradient-to-r from-black via-blue-950 to-black py-16 px-4">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-10 text-gray-900 dark:text-white">What Our Clients Say</h2>
+        <h2 className="text-3xl font-bold mb-10 text-white">What Our Clients Say</h2>
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -48,18 +47,22 @@ const ClientFeedback = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="relative bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl shadow-xl"
+            className="relative bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-white/20"
           >
+            {/* Quote Icon */}
+            <FaQuoteLeft className="text-blue-400 text-3xl mb-4 mx-auto" />
             <div className="w-20 h-20 mx-auto mb-4 relative rounded-full overflow-hidden border-4 border-blue-500">
               <Image
                 src={testimonials[index].image}
                 alt={testimonials[index].name}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
               />
             </div>
-            <p className="text-lg text-gray-700 dark:text-gray-200 mb-4">{testimonials[index].feedback}</p>
-            <h3 className="font-semibold text-blue-600 dark:text-blue-400">{testimonials[index].name}</h3>
+            <p className="text-lg text-white/90 italic mb-4">"{testimonials[index].feedback}"</p>
+            <h3 className="font-semibold text-blue-400">{testimonials[index].name}</h3>
+            <p className="text-sm text-white/70">{testimonials[index].title}</p>
+            <FaQuoteRight className="text-blue-400 text-3xl mt-4 mx-auto" />
           </motion.div>
         </AnimatePresence>
       </div>

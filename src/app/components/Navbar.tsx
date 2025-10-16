@@ -63,7 +63,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 z-[100] w-full bg-white dark:bg-gray-900 shadow-md">
+    <nav className="fixed top-0 z-[100] w-full backdrop-blur-md bg-white/60 dark:bg-gray-900/60 shadow-sm border-b border-gray-200/20">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}

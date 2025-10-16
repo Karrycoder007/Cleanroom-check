@@ -8,22 +8,35 @@ const About = () => {
     <section className="bg-gray-50 dark:bg-gradient-to-r from-black via-blue-950 to-blue-900 py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-          {/* Left Section (Text and Button) */}
+          
+          {/* Left Section (Text Content) */}
           <div className="text-center lg:text-left max-w-xl">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-              About SL AIRTECH PVT LTD.
+              About SL Airtech Pvt. Ltd.
             </h2>
 
-            {/* Intro */}
-            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-              Established in 2022, SL AIRTECH PVT LTD. is India’s leading cleanroom partition manufacturer,
-              providing cost-effective, energy-efficient, and environmentally-friendly HVAC and cleanroom solutions.
-              Our solutions have been readily accepted by customers, making us pioneers in the field.
+            {/* Introduction */}
+            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              SL AIRTECH PVT LTD. was established in <strong>2016</strong> to serve cleanroom
+              requirements in India, which were previously met through imports. As pioneers in this
+              field, our solutions were quickly accepted by customers. Over the years, we have
+              evolved into one of India’s largest cleanroom partition manufacturers.
+            </p>
+
+            <p className="mt-2 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              We are committed to making a difference by helping companies build cost-effective,
+              energy-efficient, long-lasting, and environmentally-friendly HVAC solutions that
+              conform to global standards. Our services include <strong>Supply, Installation,
+              Testing, Commissioning, Validation, and Maintenance</strong> of HVAC, Electrical,
+              IBMS, Modular Partitions, Plumbing, Firefighting, Laboratory Furniture, and Cleanroom
+              Solutions.
             </p>
 
             {/* Core Strengths */}
-            <h3 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Our Core Strengths</h3>
-            <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+            <h3 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
+              Our Core Strengths
+            </h3>
+            <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 leading-relaxed">
               <li>Rich pharmaceutical expertise with deep industry knowledge.</li>
               <li>Strong ability to understand and fulfill customer requirements.</li>
               <li>Accurate and detailed drawing creation for every project.</li>
@@ -31,19 +44,9 @@ const About = () => {
               <li>Full compliance with regulatory standards and guidelines.</li>
             </ul>
 
-            {/* Vision, Mission, Values */}
-            <h3 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vision, Mission & Values</h3>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">
-              <strong>Vision:</strong> To positively influence society through innovative and valuable engineering products and services.
-            </p>
-            <p className="mt-1 text-gray-700 dark:text-gray-300">
-              <strong>Mission:</strong> Build a healthy and hygienic environment using advanced equipment and technologies in pharmaceutical and cleanroom services.
-            </p>
-            <p className="mt-1 text-gray-700 dark:text-gray-300">
-              <strong>Values:</strong> Teamwork, Responsibility, Customer Centricity, Freedom to make decisions.
-            </p>
+            
 
-            {/* Button */}
+            {/* Call to Action */}
             <div className="mt-8">
               <Link
                 href="/contact"
@@ -57,11 +60,12 @@ const About = () => {
           {/* Right Section (Image) */}
           <div className="flex-shrink-0 w-full lg:w-1/2">
             <Image
-              src="https://plus.unsplash.com/premium_photo-1661662872476-a3c74d72da6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTd8fGNsZWFuaW5nfGVufDB8fDB8fHww"
-              alt="Cleanroom services"
+              src="https://plus.unsplash.com/premium_photo-1661662872476-a3c74d72da6e?w=1200&auto=format&fit=crop&q=80"
+              alt="Cleanroom Services"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg shadow-lg object-cover"
+              className="w-full h-auto rounded-lg shadow-xl object-cover"
+              priority
             />
           </div>
         </div>
