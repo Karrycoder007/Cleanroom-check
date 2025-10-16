@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     name: 'Vikram Rao',
-    feedback: "We have been consistently impressed with SL Airtech's commitment to quality and timely execution. Their after-sales support is exceptional.",
+    feedback: 'We have been consistently impressed with SL Airtech&apos;s commitment to quality and timely execution. Their after-sales support is exceptional.',
     title: 'Facility Manager at CleanTech Labs',
     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=60',
   },
