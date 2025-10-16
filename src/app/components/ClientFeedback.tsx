@@ -8,19 +8,19 @@ import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 const testimonials = [
   {
     name: 'Rajesh Kumar',
-    feedback: 'SL Airtech delivered our cleanroom project on time and within budget. Their attention to detail and adherence to international standards were commendable.',
+    feedback: "SL Airtech delivered our cleanroom project on time and within budget. Their attention to detail and adherence to international standards were commendable.",
     title: 'Project Manager at PharmaTech Solutions',
     image: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=600&auto=format&fit=crop&q=60',
   },
   {
     name: 'Anjali Sharma',
-    feedback: 'The team at SL Airtech provided us with a customized HVAC solution that perfectly fit our requirements. Their professionalism and expertise were evident throughout the project.',
+    feedback: "The team at SL Airtech provided us with a customized HVAC solution that perfectly fit our requirements. Their professionalism and expertise were evident throughout the project.",
     title: 'Operations Head at BioMed Industries',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=60',
   },
   {
     name: 'Vikram Rao',
-    feedback: 'We have been consistently impressed with SL Airtech&apos;s commitment to quality and timely execution. Their after-sales support is exceptional.',
+    feedback: "We have been consistently impressed with SL Airtech&apos;s commitment to quality and timely execution. Their after-sales support is exceptional.",
     title: 'Facility Manager at CleanTech Labs',
     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=60',
   },
@@ -51,17 +51,25 @@ const ClientFeedback = () => {
           >
             {/* Quote Icon */}
             <FaQuoteLeft className="text-blue-400 text-3xl mb-4 mx-auto" />
+            
+            {/* Client Image */}
             <div className="w-20 h-20 mx-auto mb-4 relative rounded-full overflow-hidden border-4 border-blue-500">
               <Image
                 src={testimonials[index].image}
                 alt={testimonials[index].name}
                 fill
                 style={{ objectFit: 'cover' }}
+                priority
               />
             </div>
-            <p className="text-lg text-white/90 italic mb-4">"{testimonials[index].feedback}"</p>
+
+            {/* Feedback */}
+            <p className="text-lg text-white/90 italic mb-4">&quot;{testimonials[index].feedback}&quot;</p>
+
+            {/* Name and Title */}
             <h3 className="font-semibold text-blue-400">{testimonials[index].name}</h3>
             <p className="text-sm text-white/70">{testimonials[index].title}</p>
+
             <FaQuoteRight className="text-blue-400 text-3xl mt-4 mx-auto" />
           </motion.div>
         </AnimatePresence>
