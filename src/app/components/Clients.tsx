@@ -4,12 +4,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const clients = [
-  { name: "Google", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Microsoft", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Tesla", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Amazon", logo: "/https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Adobe", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Meta", logo: "/https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Google", logo: "/apotex.jpg" },
+  { name: "Microsoft", logo: "/anthem.webp" },
+  { name: "Tesla", logo: "/givaudan.png" },
+  { name: "Amazon", logo: "/mtr.png" },
+  { name: "Adobe", logo: "/ovobel.jpg" },
+  { name: "Meta", logo: "/tata adv.png" },
+  { name: "Meta", logo: "/strides.jpg" },
+  { name: "Meta", logo: "/tata electronic.png" },
+  { name: "Meta", logo: "/syngene.jpg" },
 ];
 
 export default function OurClients() {

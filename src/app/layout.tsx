@@ -14,7 +14,7 @@ import { Poppins } from 'next/font/google'
 export const metadata: Metadata = {
   title: "Cleanroom | Cleaning Services",
   description: "Providing cleaning services across all industries.",
-};
+}; 
 
 export default function RootLayout({
   

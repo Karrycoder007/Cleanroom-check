@@ -36,7 +36,7 @@ const Loader = ({ onFinish }: LoaderProps) => {
             transition={{ duration: 1 }}
           >
             <Image
-              src="/logo-1.webp"
+              src="/mainlogo.jpeg"
               alt="Cleanroom Logo"
               width={220}
               height={220}
