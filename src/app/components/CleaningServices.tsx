@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 interface ServiceSectionProps {
@@ -34,10 +35,13 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
             ))}
           </ul>
         </div>
+
         <div className="rounded-lg overflow-hidden shadow-lg">
-          <img
+          <Image
             src={imageUrl}
             alt={title}
+            width={800}
+            height={600}
             className="w-full h-auto object-cover"
           />
         </div>

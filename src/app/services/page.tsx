@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 interface Service {
@@ -34,10 +35,6 @@ const services: Service[] = [
   { title: "Air Curtains", description: "Air barrier systems to prevent contamination.", imageUrl: "/cp24.webp" },
 ];
 
-
-
-
-
 const Services: React.FC = () => {
   return (
     <section className="w-full py-16 bg-gray-50 dark:bg-gradient-to-r from-black via-blue-900 to-blue-950 transition-colors duration-500">
@@ -52,11 +49,16 @@ const Services: React.FC = () => {
               key={index}
               className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
-              <img
-                src={service.imageUrl}
-                alt={service.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative w-full h-48">
+                <Image
+                  src={service.imageUrl}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
                   {service.title}
