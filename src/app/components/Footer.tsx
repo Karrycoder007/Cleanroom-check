@@ -11,9 +11,16 @@ const Footer = () => {
 
         {/* Logo & Intro */}
         <div>
-          <Link href="/" className="flex items-center space-x-2 py-2">
-            <Image src="/logo-1.webp" alt="SL Airtech Pvt. Ltd." width={190} height={190} />
-          </Link>
+        <Link href="/" className="flex items-center space-x-2 py-2">
+  <Image
+    src="/mainlogo.jpeg"
+    alt="SL Airtech Pvt. Ltd."
+    width={190}
+    height={190}
+    className="rounded-lg"   // or rounded-full / rounded-xl
+  />
+</Link>
+
           <p className="text-sm text-gray-400 mt-2">
             Delivering pharma-grade cleanroom and HVAC validation solutions with precision, reliability, and trust.
           </p>

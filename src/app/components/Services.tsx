@@ -8,43 +8,43 @@ const services = [
     title: 'Pharma Cleanroom Setup',
     description:
       'Design and installation of pharma-grade cleanrooms, ensuring contamination control, operational efficiency, and regulatory compliance.',
-    image: 'https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/se1.png',
   },
   {
     title: 'HVAC Systems',
     description:
       'Energy-efficient HVAC solutions for cleanrooms and laboratories, designed to maintain optimal air quality, temperature, and pressure.',
-    image: 'https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/cp4.png',
   },
   {
     title: 'Electrical & IBMS',
     description:
       'Complete electrical installations, including Intelligent Building Management Systems (IBMS) for automated and safe operations.',
-    image: 'https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/se2.jpg',
   },
   {
     title: 'Modular Partitions & Wall Panels',
     description:
       'Customized modular wall solutions and partitions for sterile environments, with premium materials and easy installation.',
-    image: 'https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/se3.webp',
   },
   {
     title: 'Plumbing & Firefighting',
     description:
       'Comprehensive plumbing solutions and firefighting systems designed for industrial, laboratory, and cleanroom safety.',
-    image: 'https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/se5.jpg',
   },
   {
     title: 'Laboratory Furniture',
     description:
       'High-quality laboratory furniture tailored for durability, ergonomics, and compliance with safety standards.',
-    image: 'https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/se4.jpg',
   },
   {
     title: 'Validation & Maintenance',
     description:
       'End-to-end services including testing, commissioning, validation, and maintenance of cleanroom and HVAC systems.',
-    image: 'https://images.unsplash.com/photo-1757219525975-03b5984bc6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/se6.jpg',
   },
 ];
 

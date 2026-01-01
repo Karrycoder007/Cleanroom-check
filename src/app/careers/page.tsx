@@ -4,10 +4,10 @@ import React from "react";
 
 export default function Careers() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800 py-12 px-6">
+    <div className="min-h-screen bg-gray-890 text-gray-800 py-12 px-6">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-6">Careers at Cleanroom</h1>
-        <p className="text-lg text-center mb-10">
+        <p className="text-lg text-center mb-10 text-white">
           Join our team of passionate professionals at Cleanroom. 
           We are always looking for talented and motivated individuals 
           who share our commitment to innovation, quality, and service.
@@ -53,8 +53,8 @@ export default function Careers() {
 
         {/* General Application */}
         <div className="mt-12 text-center">
-          <h3 className="text-xl font-semibold mb-2">Didn’t find a role that fits you?</h3>
-          <p className="text-gray-600 mb-4">
+          <h3 className="text-xl font-semibold mb-2 text-amber-50">Didn’t find a role that fits you?</h3>
+          <p className="text-gray-400 mb-4">
             We’d still love to hear from you! Send us your resume and we’ll get in touch when a role opens up.
           </p>
           <button className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">

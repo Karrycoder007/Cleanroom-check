@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
@@ -53,7 +53,7 @@ const ClientFeedback = () => {
             <FaQuoteLeft className="text-blue-400 text-3xl mb-4 mx-auto" />
             
             {/* Client Image */}
-            <div className="w-20 h-20 mx-auto mb-4 relative rounded-full overflow-hidden border-4 border-blue-500">
+            {/* <div className="w-20 h-20 mx-auto mb-4 relative rounded-full overflow-hidden border-4 border-blue-500">
               <Image
                 src={testimonials[index].image}
                 alt={testimonials[index].name}
@@ -61,7 +61,7 @@ const ClientFeedback = () => {
                 style={{ objectFit: 'cover' }}
                 priority
               />
-            </div>
+            </div> */}
 
             {/* Feedback */}
             <p className="text-lg text-white/90 italic mb-4">&quot;{testimonials[index].feedback}&quot;</p>
