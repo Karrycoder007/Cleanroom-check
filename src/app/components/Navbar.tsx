@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, Menu, X } from 'lucide-react';
@@ -49,63 +49,108 @@ const navItems: NavItem[] = [
     ],
   },
   { title: 'About', href: '/about' },
-  
   { title: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
+  const [activeDesktopDropdown, setActiveDesktopDropdown] = useState<string | null>(null);
+
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const closeMobileMenu = () => {
     setMobileOpen(false);
     setActiveMobileDropdown(null);
   };
 
+  // Close on outside click (desktop)
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setActiveDesktopDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
     <nav className="fixed top-0 z-[100] w-full backdrop-blur-md bg-white/60 dark:bg-gray-900/60 shadow-sm border-b border-gray-200/20">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/mainlogo.jpeg" alt="Cleanroom" width={70} height={70} />
-            <span className="text-xl font-bold text-gray-800 dark:text-white"></span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             {navItems.map((item, idx) =>
               item.submenu ? (
-                <div key={idx} className="relative group">
-                  <button className="flex items-center text-gray-600 dark:text-gray-200 hover:text-blue-400 transition">
-                    {item.title}
-                    <ChevronDown className="ml-1 w-4 h-4" />
-                  </button>
-                  <div
-                    className="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-md rounded-md 
-                               opacity-0 group-hover:opacity-100 group-hover:translate-y-1 
-                               transition-all duration-200 invisible group-hover:visible z-40 
-                               max-h-72 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 
-                               dark:scrollbar-thumb-gray-600 scrollbar-track-transparent"
-                  >
-                    {item.submenu.map((sub, i) => (
-                      <Link
-                        key={i}
-                        href="/services" // ✅ all submenu items go to the same page
-                        className="block px-2 py-1 text-sm text-gray-700 dark:text-gray-200 
-                                   hover:bg-gray-100 dark:hover:bg-gray-700 rounded-sm transition"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
+                <div
+                  key={idx}
+                  className="relative"
+                  ref={dropdownRef}
+                  onMouseEnter={() => setActiveDesktopDropdown(item.title)}
+                  onMouseLeave={() => setActiveDesktopDropdown(null)}
+                >
+                  <div className="flex items-center space-x-1">
+                    
+                    {/* Clickable link */}
+                    <Link
+                      href={item.href!}
+                      className="text-gray-700 dark:text-gray-200 hover:text-blue-500 transition"
+                    >
+                      {item.title}
+                    </Link>
+
+                    {/* Arrow toggle for touch */}
+                    <button
+                      onClick={() =>
+                        setActiveDesktopDropdown(
+                          activeDesktopDropdown === item.title ? null : item.title
+                        )
+                      }
+                    >
+                      <ChevronDown
+                        className={`w-4 h-4 transition ${
+                          activeDesktopDropdown === item.title ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
                   </div>
+
+                  <AnimatePresence>
+                    {activeDesktopDropdown === item.title && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -8 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute left-0 mt-3 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-md 
+                                   z-40 max-h-72 overflow-y-auto"
+                      >
+                        {item.submenu.map((sub, i) => (
+                          <Link
+                            key={i}
+                            href="/services"
+                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 
+                                       hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ) : (
                 <Link
                   key={idx}
                   href={item.href!}
-                  className="text-gray-700 dark:text-gray-200 hover:text-blue-400 transition"
+                  className="text-gray-700 dark:text-gray-200 hover:text-blue-500 transition"
                 >
                   {item.title}
                 </Link>
@@ -113,7 +158,7 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-gray-700 dark:text-white"
@@ -123,7 +168,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -151,20 +196,19 @@ export default function Navbar() {
                       }`}
                     />
                   </button>
+
                   <AnimatePresence>
                     {activeMobileDropdown === item.title && (
                       <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        className="ml-4 mt-1 space-y-1 max-h-72 overflow-y-auto pr-2 
-                                   scrollbar-thin scrollbar-thumb-gray-400 
-                                   dark:scrollbar-thumb-gray-600 scrollbar-track-transparent"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="ml-4 mt-1 space-y-1"
                       >
                         {item.submenu.map((sub, subIdx) => (
                           <Link
                             key={subIdx}
-                            href="/services" // ✅ mobile submenu all go to /services
+                            href="/services"
                             onClick={closeMobileMenu}
                             className="block text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500"
                           >
