@@ -60,7 +60,7 @@ const AboutPage = () => {
           </div>
           <div className="md:w-1/2">
             <Image
-              src="https://images.unsplash.com/photo-1581091215363-020c2c9f0cdb?w=600&auto=format&fit=crop&q=80"
+              src="/mainlogo.jpeg"
               alt="Cleanroom Services"
               width={500}
               height={300}
@@ -79,7 +79,7 @@ const AboutPage = () => {
         >
           <div className="md:w-1/2">
             <Image
-              src="https://images.unsplash.com/photo-1596495577886-d920f1f67b43?w=600&auto=format&fit=crop&q=80"
+              src="/vision.jpg"
               alt="Vision and Mission"
               width={500}
               height={300}

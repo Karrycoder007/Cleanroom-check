@@ -60,7 +60,7 @@ const About = () => {
           {/* Right Section (Image) */}
           <div className="flex-shrink-0 w-full lg:w-1/2">
             <Image
-              src="https://plus.unsplash.com/premium_photo-1661662872476-a3c74d72da6e?w=1200&auto=format&fit=crop&q=80"
+              src="/mainlogo.jpeg"
               alt="Cleanroom Services"
               width={600}
               height={400}
